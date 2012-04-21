@@ -244,7 +244,7 @@ public class ChannelAppManager {
 			.getPackageManager();
 			Intent intent = new Intent();
 			intent.setAction(Intent.ACTION_MAIN);
-			intent.addCategory(Intent.CATEGORY_LAUNCHER);
+			intent.addCategory("org.openintents.category.LAUNCHER_CHANNEL");
 			List<ResolveInfo> packageList = pm.queryIntentActivities(intent,
 							PackageManager.GET_META_DATA);
 			if (packageList != null) {
