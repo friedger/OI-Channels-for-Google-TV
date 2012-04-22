@@ -19,18 +19,12 @@
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"    
-    android:padding="8dip" >
-
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="fill_parent"
-        android:layout_height="150dp"
-        android:drawable="@drawable/icon"
-        android:scaleType="fitCenter" />
+    android:padding="10dip" >    
 
     <TextView
         android:id="@+id/channel"
         android:layout_width="fill_parent"
-        android:layout_height="40dp" android:gravity="center"/>
+        android:layout_height="50dp" android:gravity="center"
+        android:text="nothing found"/>
 
 </LinearLayout>

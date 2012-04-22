@@ -254,8 +254,7 @@ public class ChannelAppManager {
 					final String title = ri.activityInfo.loadLabel(pm).toString();
 					final String packageName = ri.activityInfo.applicationInfo.packageName;
 					final String activityName = ri.activityInfo.name;
-					final int icon = ri.getIconResource(); 
-					Log.v(TAG, "" + packageName + " " + title);
+					final int icon = ri.getIconResource(); 					
 					final ChannelItem item = new ChannelItem(mContext, i, title, packageName, activityName, icon, mHandler);
 					mHandler.post(new Runnable() {
 						public void run() {
@@ -264,6 +263,12 @@ public class ChannelAppManager {
 						}
 					});
 				}
+			} else {
+				mHandler.post(new Runnable(){
+					public void run(){						
+					}
+				});
+				
 			}
 		}
 	}

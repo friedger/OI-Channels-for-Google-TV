@@ -37,9 +37,9 @@ public class ChannelsLeftNavService {
     public static LeftNavBar getLeftNavBar(Context context) {
         LeftNavBar bar = (LeftNavBarService.instance()).getLeftNavBar((Activity) context);
         mContext = context;
+        bar.setDisplayOptions(LeftNavBar.DEFAULT_DISPLAY_OPTIONS);
         bar.setDisplayShowTitleEnabled(false);
         bar.setDisplayUseLogoEnabled(false);
-        bar.setDisplayOptions(LeftNavBar.DISPLAY_AUTO_EXPAND);
         bar.removeAllTabs();
 
         bar.addTab(bar.newTab().setText(R.string.search).setIcon(R.drawable.search)

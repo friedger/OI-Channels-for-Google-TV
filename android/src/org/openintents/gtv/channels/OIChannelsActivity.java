@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.ViewGroup.LayoutParams;
 import android.view.ViewGroup.OnHierarchyChangeListener;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
@@ -45,8 +46,11 @@ public class OIChannelsActivity extends Activity {
             public void onChildViewRemoved(View parent, View child) {
             }
         });
-
-        ChannelsLeftNavService.getLeftNavBar(this);
+        View emptyView = getLayoutInflater().inflate(R.layout.channels_empty, null, false);
+        gridView.setEmptyView(emptyView);
+        addContentView(emptyView, new LayoutParams(LayoutParams.FILL_PARENT, LayoutParams.FILL_PARENT));
+        
+        //ChannelsLeftNavService.getLeftNavBar(this);
         gridView.requestFocus();
         
         ChannelAppManager.getInstance(this).load();
